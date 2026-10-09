@@ -1,0 +1,132 @@
+================================================================================
+DATA QUALITY AUDIT REPORT
+================================================================================
+
+DATASET OVERVIEW:
+  Total records: 5,120
+  Unique order_ids: 5,000
+  Unique customers: 1,356
+  Date range: 2025-01-01 to 2025-12-31
+
+================================================================================
+DUPLICATE ANALYSIS
+================================================================================
+
+Total records: 5,120
+Unique order_ids: 5,000
+Duplicate order_ids: 120
+Total duplicate records: 240
+  - Exact duplicates: 240
+  - Conflicting duplicates: 0
+
+Sample duplicate groups (first 5):
+
+  Order ID: ORD202827 (2 records)
+    Record 1:
+      Date: 08-03-2025
+      Customer: C1950
+      Product: Lipstick
+      Quantity: 1
+      Price: 420.92
+      Status: Delivered
+    Record 2:
+      Date: 08-03-2025
+      Customer: C1950
+      Product: Lipstick
+      Quantity: 1
+      Price: 420.92
+      Status: Delivered
+
+  Order ID: ORD200213 (2 records)
+    Record 1:
+      Date: 14-09-2025
+      Customer: C2365
+      Product: Cotton T-Shirt
+      Quantity: 2
+      Price: 0
+      Status: Cancelled
+    Record 2:
+      Date: 14-09-2025
+      Customer: C2365
+      Product: Cotton T-Shirt
+      Quantity: 2
+      Price: 0
+      Status: Cancelled
+
+  Order ID: ORD204133 (2 records)
+    Record 1:
+      Date: 26-09-2025
+      Customer: C1195
+      Product: Power Bank
+      Quantity: 1
+      Price: 1335.74
+      Status: Delivered
+    Record 2:
+      Date: 26-09-2025
+      Customer: C1195
+      Product: Power Bank
+      Quantity: 1
+      Price: 1335.74
+      Status: Delivered
+
+  Order ID: ORD202316 (2 records)
+    Record 1:
+      Date: 07-03-2025
+      Customer: C2098
+      Product: USB-C Cable
+      Quantity: 2
+      Price: 383.29
+      Status: Delivered
+    Record 2:
+      Date: 07-03-2025
+      Customer: C2098
+      Product: USB-C Cable
+      Quantity: 2
+      Price: 383.29
+      Status: Delivered
+
+  Order ID: ORD204310 (2 records)
+    Record 1:
+      Date: 27-06-2025
+      Customer: C2068
+      Product: Bluetooth Speaker
+      Quantity: 1
+      Price: 2095.23
+      Status: Returned
+    Record 2:
+      Date: 27-06-2025
+      Customer: C2068
+      Product: Bluetooth Speaker
+      Quantity: 1
+      Price: 2095.23
+      Status: Returned
+
+================================================================================
+INVALID VALUES ANALYSIS
+================================================================================
+
+QUANTITY ISSUES:
+  Negative quantities: 31
+  Zero quantities: 21
+  Suspiciously high (>100): 6
+
+PRICE ISSUES:
+  Negative prices: 0
+  Zero prices: 26
+  Suspiciously high (>$100,000): 8
+
+DISCOUNT ISSUES:
+  Negative discounts: 0
+  Discounts > 100%: 10
+
+================================================================================
+MISSING VALUES ANALYSIS
+================================================================================
+
+  customer_name: 93 (1.82%)
+  city: 186 (3.63%)
+  unit_price: 153 (2.99%)
+  discount_pct: 123 (2.40%)
+  payment_method: 40 (0.78%)
+
+================================================================================
